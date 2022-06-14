@@ -30,23 +30,19 @@ for cars in labels:
 
 # Task 3
 
-name_of_list = ['Hello world!']
-
-half_length = int((len(name_of_list[0])) / 2)
-
-chast1 = name_of_list[0][:half_length]
-chast2 = name_of_list[0][half_length:]
+name_of_list = ['Hello']
 
 if int(len(name_of_list[0])) % 2 != 0:
-    half_length = int(len(chast1)) + 1
+    half_length = int(((len(name_of_list[0])) / 2) + 1)
+else:
+    half_length = int((len(name_of_list[0])) / 2)
 
-new_chast1 = name_of_list[0][0:half_length]
-new_chast2 = name_of_list[0][half_length:]
+chast1 = name_of_list[0][0:half_length]
+chast2 = name_of_list[0][half_length:]
 
-new_list = new_chast2 + new_chast1
+new_list = chast2 + chast1
 
 print(list(new_list))
-
 
 # Task 4
 
