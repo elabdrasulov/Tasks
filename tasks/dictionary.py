@@ -145,5 +145,5 @@ print(result)
 
 string = 'pythonist'
 
-dict_ = {count: string.count(count) for count in string}
+dict_ = {i: string.count(i) for i in string}
 print(dict_)
