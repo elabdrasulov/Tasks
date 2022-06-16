@@ -48,7 +48,9 @@ list_name = ['paul', 'john', 'george',
              'ringo', 'eric', 'patty', 
              'yoko', 'cynthia', 'linda', 
              'jude' ] 
-new_list = [name.replace(name, 'shorter') if len(name) <= 4 else name.replace(name,'longer') for name in list_name]
+new_list = [name.replace(name, 'shorter') 
+            if len(name) <= 4 else name.replace(name,'longer') 
+            for name in list_name]
 print(new_list)
 
 
@@ -76,7 +78,9 @@ print(dict_)
 # Task 12
 
 dict_ = {'first': 1, 'second': 2, 'third': 3} 
-a = {k: str(v).replace(f'{v}', 'even') if v % 2 == 0 else str(v).replace(f'{v}', 'odd') for k, v in dict_.items()}
+a = {k: str(v).replace(f'{v}', 'even') 
+     if v % 2 == 0 else str(v).replace(f'{v}', 'odd') 
+     for k, v in dict_.items()}
 print(a)
 
 
