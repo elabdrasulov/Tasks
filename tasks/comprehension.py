@@ -105,19 +105,22 @@ dict_ = {'Timur': {'history': 90, 'math': 95, 'literature': 91},
          'Nik': {'history': 84, 'math': 85, 'literature': 87}
          }
 
-list1 = []
-for k in dict_.keys():
-    list1.append(k)
+list1 = [k for k in dict_.keys()]
+# # через цикл for
+# list1 = []
+# for k in dict_.keys():
+#     list1.append(k)
 
 list2 = []
 for k, v in dict_.items():
     for inner_k in v.keys():
-        if inner_k == max(v, key = v.get):
-            list2.append(inner_k)  
+        if inner_k == max(v, key = v.get): # вытаскиваем ключ внутреннего словаря,
+            list2.append(inner_k)          # значения которого максимальное через функцию max()
+
 new_dict = {list1[index]: list2[index] for index in range(len(list1))}
 
 # new_dict = dict((list1[index] ,list2[index]) for index in range(len(list1)))
-# new_dict = dict(zip(list1, list2))
+# new_dict = dict(zip(list1, list2)) # через функцию zip()
 
 print(new_dict)
 
@@ -138,9 +141,12 @@ print(new_dict)
 
 my_dict = {'first': {'a': 1}, 'second': {'b': 2}} 
 
-list1 = []
-for k, v in my_dict.items():
-    list1.append(k)
+list1 = [k for k in my_dict.keys()]
+
+# # через цикл for
+# list1 = []
+# for k in my_dict.keys():
+#     list1.append(k)
 
 list2 = []
 for k, v in my_dict.items():
@@ -148,7 +154,7 @@ for k, v in my_dict.items():
         list2.append(inner_v)
 
 dict_ = {list1[index]: list2[index] for index in range(len(list1))}
-# dict_ = dict(zip(list1, list2))
+# dict_ = dict(zip(list1, list2)) # через функцию zip()
 
 print(dict_)
 
