@@ -119,7 +119,6 @@ new_dict = {list1[index]: list2[index] for index in range(len(list1))}
 # new_dict = dict((list1[index] ,list2[index]) for index in range(len(list1)))
 # new_dict = dict(zip(list1, list2))
 
-
 print(new_dict)
 
 
